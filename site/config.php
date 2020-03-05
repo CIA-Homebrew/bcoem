@@ -139,7 +139,9 @@ $session_expire_after = 30;
  * TRUE back to a FALSE!
  */
 
-$setup_free_access =  filter_var(getenv('SETUP_MODE'), FILTER_VALIDATE_BOOLEAN);
+// $setup_free_access =  filter_var(getenv('SETUP_MODE'), FILTER_VALIDATE_BOOLEAN);
+$setup_free_access = TRUE;
+
 
 /*
  * ******************************************************************************
@@ -187,8 +189,8 @@ $sub_directory = "";
  * @fixes https://github.com/geoffhumphrey/brewcompetitiononlineentry/issues/1123 
  */
 
-$base_url = "http://";
-// if (is_https()) $base_url = "https://";
+$base_url = "http://salty-cliffs-41189.herokuapp.com/";
+if (is_https()) $base_url = "https://salty-cliffs-41189.herokuapp.com/";
 $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
 
 /*
