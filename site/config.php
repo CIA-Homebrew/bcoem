@@ -63,8 +63,6 @@ $database_port = ini_get('mysqli.default_port');
  * error will be returned.
  */
 
-echo $hostname, $username, $password, $database, $database_port;
-
 $connection = new mysqli($hostname, $username, $password, $database, $database_port);
 mysqli_set_charset($connection,'utf8mb4');
 mysqli_query($connection, "SET NAMES 'utf8mb4';");
@@ -141,8 +139,8 @@ $session_expire_after = 30;
  * TRUE back to a FALSE!
  */
 
-// $setup_free_access =  filter_var(getenv('SETUP_MODE'), FILTER_VALIDATE_BOOLEAN);
-$setup_free_access = TRUE;
+$setup_free_access =  filter_var(getenv('SETUP_MODE'), FILTER_VALIDATE_BOOLEAN);
+// $setup_free_access = TRUE;
 
 
 /*
@@ -207,7 +205,7 @@ $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
  * the default will suffice.
  */
 
-// $server_root = $_SERVER['DOCUMENT_ROOT'];
-$server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
+$server_root = $_SERVER['DOCUMENT_ROOT'];
+// $server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 
 ?>
