@@ -203,7 +203,7 @@ $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
  * the default will suffice.
  */
 
-$server_root = $_SERVER['DOCUMENT_ROOT'];
-// $server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
+// $server_root = $_SERVER['DOCUMENT_ROOT'];
+$server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 
 ?>
