@@ -46,7 +46,7 @@ define('DEBUGGING',ROOT.'includes'.DIRECTORY_SEPARATOR.'debug'.DIRECTORY_SEPARAT
  * The following are for use by the developer
  * Default for all is FALSE
  */
-define('HOSTED', FALSE);
+define('HOSTED', TRUE);
 define('NHC', FALSE);
 define('SINGLE', FALSE);
 define('EVALUATION', FALSE);
@@ -127,7 +127,7 @@ define('ENABLE_MARKDOWN', TRUE);
  * Default is FALSE.
  */
 
-define('ENABLE_MAILER', TRUE);
+define('ENABLE_MAILER', FALSE);
 
 /**
  * --------------------------------------------------------

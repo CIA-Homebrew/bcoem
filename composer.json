@@ -1,0 +1,8 @@
+{
+    "name":"CIA_BCOEM",
+    "description": "",
+    "require": {},
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    }
+}

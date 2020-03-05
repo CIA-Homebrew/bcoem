@@ -21,7 +21,7 @@
  * *** https://www.godaddy.com/help/viewing-your-database-details-with-shared-hosting-accounts-39
  */
 
-$hostname = "localhost";
+$hostname = getenv('CLEAR_DB_HOSTNAME');
 
 /**
  * Enter the username for your database (generally the same as your login code 
@@ -30,7 +30,7 @@ $hostname = "localhost";
  * For example, if your username is fred then the line should read $username = "fred".
  */
 
-$username = "";
+$username = getenv('CLEAR_DB_USER');
 
 /**
  * INSERT YOUR PASSWORD BETWEEN THE DOUBLE-QUOTATION MARKS ("").
@@ -38,15 +38,16 @@ $username = "";
  * $password = "flintsone".
  */
 
-$password = "";
+$password = getenv('CLEAR_DB_PASS');
 
 /**
  * The following line is the name of your MySQL database you set up already.
  * If you haven't set up the database yet, please refer to
  * http://brewcompetition.com/install-instructions for setup instructions.
+ * 
  */
 
-$database = "";
+$database = getenv('CLEARDB_DATABASE_URL');
 
 /**
  * If the database port is different from the default then overwrite as the 
@@ -100,7 +101,7 @@ $brewing = $connection;
  * $prefix = "comp1_";
  */
 
-$prefix = "";
+$prefix = getenv('DB_PREFIX');
 
 /*
  * ******************************************************************************
@@ -114,7 +115,7 @@ $prefix = "";
  * change the variable to something completely unique for each installation.
  */
 
-$installation_id = "";
+$installation_id = getenv('INSTALLATION_ID');
 
 /*
  * ******************************************************************************
@@ -138,7 +139,7 @@ $session_expire_after = 30;
  * TRUE back to a FALSE!
  */
 
-$setup_free_access =  FALSE;
+$setup_free_access =  filter_var(getenv('SETUP_MODE'), FILTER_VALIDATE_BOOLEAN);
 
 /*
  * ******************************************************************************
@@ -203,6 +204,6 @@ $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
  */
 
 $server_root = $_SERVER['DOCUMENT_ROOT'];
-//$server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
+// $server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
 
 ?>
