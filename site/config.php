@@ -188,7 +188,7 @@ $sub_directory = "";
  */
 
 $base_url = "http://";
-if (is_https()) $base_url = "https://";
+// if (is_https()) $base_url = "https://";
 $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
 
 /*
