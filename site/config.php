@@ -63,6 +63,8 @@ $database_port = ini_get('mysqli.default_port');
  * error will be returned.
  */
 
+echo($hostname, $username, $password, $database, $database_port)
+
 $connection = new mysqli($hostname, $username, $password, $database, $database_port);
 mysqli_set_charset($connection,'utf8mb4');
 mysqli_query($connection, "SET NAMES 'utf8mb4';");
