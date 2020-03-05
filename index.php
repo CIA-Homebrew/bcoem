@@ -6,8 +6,6 @@
  */
 
 // ---------------------------- Load Config Scripts ------------------------------
-echo "got into config file**********************************************************"
-
 require_once ('paths.php');
 require_once (CONFIG.'bootstrap.php');
 require_once (DB.'mods.db.php');
