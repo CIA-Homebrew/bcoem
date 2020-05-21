@@ -2,7 +2,7 @@
     "name":"CIA-HOMEBREW/bcoem",
     "description": "",
     "require": {
-        "php": ">=5.6.X <7.3.X"
+        "php": ">=5.6.X <7.3"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
