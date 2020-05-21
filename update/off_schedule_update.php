@@ -546,7 +546,7 @@ $row_delay = mysqli_fetch_assoc($delay);
 
 // Check if the length is less than 10 (Unix timestamp is 10)
 // If so, convert to timestamp
-if ((strlen($row_delay['prefsWinnerDelay'])) < 10) {
+if (($row_delay['prefsWinnerDelay']) && (strlen($row_delay['prefsWinnerDelay'])) < 10) {
 
 	$query_check = sprintf("SELECT judgingDate FROM %s ORDER BY judgingDate DESC LIMIT 1", $prefix."judging_locations");
 	$check = mysqli_query($connection,$query_check) or die (mysqli_error($connection));
