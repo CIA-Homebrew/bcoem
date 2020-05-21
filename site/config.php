@@ -206,6 +206,6 @@ $base_url .= $_SERVER['SERVER_NAME'].$sub_directory."/";
  */
 
 // $server_root = $_SERVER['DOCUMENT_ROOT'];
-$server_root = $_SERVER['SUBDOMAIN_DOCUMENT_ROOT'];
+$server_root = (!empty($_SERVER['SUBDOMAIN_DOCUMENT_ROOT']));
 
 ?>
