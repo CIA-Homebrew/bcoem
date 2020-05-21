@@ -1,8 +1,8 @@
 {
-    "name":"CIA-HOMEBREW/bcoem",
+    "name":"cia-homebrew/bcoem",
     "description": "",
     "require": {
-        "php": ">=5.6 <7.3"
+        "php": "5.6 - 7.3"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
